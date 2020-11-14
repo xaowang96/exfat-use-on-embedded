@@ -21,7 +21,7 @@ sudo apt install exfat-fuse exfat-utils
 ```
 ### 3. 嵌入式平台
 
-在嵌入式端支持exFAT就没那么容易了(并不能直接安装23333)，我们可以编译exfat-nofuse的源码,生成内核驱动，在使用的时候加载驱动即可,以下以某mips架构平台为例（~_~）
+在嵌入式端支持exFAT就没那么容易了(并不能直接安装23333)，我们可以编译exfat-nofuse的源码,生成内核驱动，在使用的时候加载驱动即可,以下以某mips架构平台为例（\>_\<）
 
 #### 3.1 下载源码
 
@@ -87,11 +87,10 @@ make
 + 加载驱动
   ```C
   # insmod /ipc/modules/exfat.ko 
-[   31.728000] exFAT: Version 1.2.9
+  [   31.728000] exFAT: Version 1.2.9
   ```
   
 + 挂载/卸载SD卡
-
   ```C
   # mount /dev/mmcblk0p1 /mnt/disc1/
   [  106.936000] [EXFAT] trying to mount...
@@ -104,7 +103,6 @@ make
   ```
 
 + 卸载驱动
-
   ```C
   # lsmod 
   Module                  Size  Used by    Tainted: G  
